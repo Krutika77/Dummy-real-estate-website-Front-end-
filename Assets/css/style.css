@@ -1,0 +1,61 @@
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#showcase{
+  background-image:url('../image/img2.jpg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+color: black;
+}
+.space{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+footer {
+			background-image: url("assets/footerbk.png");
+			opacity: 0.95;
+			background-size: 100vh; 
+			background-color: #181a21;
+			padding: 1rem;
+			text-align: center;
+		}
+         footer li a {
+         color: rgba(255, 255, 255, 1);
+			margin: auto 2rem;
+         }
+         footer .icon {
+         margin-right: 25px;
+         height: 20px;
+         float: left;
+         }
+         footer a:hover {
+			color: rgba(255, 255, 255, 1);
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+		
+
+.outer {
+  width: 1px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.inner {
+  position: absolute;
+  width:100%;
+  height: 40%;
+  background: grey;
+  top: 30%;
+  box-shadow: 0px 0px 30px 20px grey;
+}
