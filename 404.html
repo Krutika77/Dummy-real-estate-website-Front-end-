@@ -1,0 +1,168 @@
+<html>
+   <head>
+   	<link rel="stylesheet" href="assets/css/chstyle.css"/><!--For header and footer that is common to all pages-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="modules/css/bootstrap.min.css">
+      <script src="modules/js/jquery.min.js"></script>
+      <script src="modules/js/popper.min.js"></script>
+      <script src="modules/js/bootstrap.min.js"></script>
+            <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         function myFunct()
+         {
+         document.getElementById("myDropdown2").classList.toggle("show");
+         }
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+        <title>PROPERties | 404  page</title>
+      <style>
+		body {
+			background-color: #f5f5f5;
+		}
+
+		.img-size {
+			width: 50%;
+			height: 50%;
+			margin: 2rem;
+			padding: 2rem;
+			background: rgba(240, 240, 253, 0.90);
+			border-radius: 8px;
+			box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+		}
+
+		h1 {
+			margin-top: 2rem;
+		}
+
+		footer {
+			background-image: url("assets/images/footerbk.png");
+			opacity: 0.95;
+			background-size: 100vh;
+			background-color: #181a21;
+			padding: 1rem;
+			text-align: center;
+		}
+
+		footer li a {
+			color: rgba(255, 255, 255, 1);
+			margin: auto 2rem;
+		}
+
+		footer .icon {
+			margin-right: 25px;
+			height: 20px;
+			float: left;
+		}
+
+		footer a:hover {
+			color: rgba(255, 255, 255, 1);
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+
+	
+	</style>
+	</head>
+   <body>
+       
+       <!--header start-->
+      <header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><!--Fixed navigation bar-->
+			<a class="navbar-brand" href="#">PROPERties.com</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="form-inline mt-1">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home
+          <span class="sr-only">(current)</span>
+        </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html">Login | Register</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blog.html">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact_us.html">Contact Us</a>
+					</li>
+					<li class="nav-item dropdown"><!--Dropdowm list for currency and languages-->
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#8377;</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item active" href="#">&#8377;</a>
+							<a class="dropdown-item" href="#">&#36;</a>
+							<a class="dropdown-item" href="#">&#8364;</a>
+							<a class="dropdown-item" href="#">&#163;</a>
+							<a class="dropdown-item" href="#">&#165;</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">English</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item active" href="#">English</a>
+							<a class="dropdown-item" href="#">हिंदी</a>
+							<a class="dropdown-item" href="#">German</a>
+							<a class="dropdown-item" href="#">Français</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header><!--header ends-->
+	<div class="container-fluid">
+		<div class="row-fluid" style="text-align:center;">
+			<br><br><h1>Error 404: Page Not Found!</h1>
+			<figure><img class="img-responsive img-size" src="assets/images/404img.jpg" alt="404 Error Image" style="width: 50%; height: auto;">
+				<figcaption><a href="https://www.freepik.com/free-photos-vectors/city">City vector created by Freepik</a></figcaption>
+			</figure>
+			<p>Whoops! Looks like the page you were looking for doesn't exist. <br>
+				<small>Use the navigation links above to browse our website.</small>
+			</p>
+		</div>
+	</div>
+       <!--footer starts-->
+<footer>
+         <div style="text-align: center; padding: 20px; font-size: 20px;">
+         <ul>
+            <li class="list-inline-item txt"><a href="about_us.html">About us</a></li>
+            <li class="list-inline-item txt"><a href="contact_us.html">Customer Care</a></li>
+            <li class="list-inline-item txt"><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+            <li class="list-inline-item txt"><a href="privacy_policy.html">Privacy Policy</a></li>
+         </ul>
+         <hr color="#989eb4" width="70%">
+         <br>
+         <div>
+            <ul class="list-inline">
+               <li class="list-inline-item"><a href="#"><img src="assets/images/tw.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/fb.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/linkedin.png" class="zoom center"></a></li>
+            </ul>
+            </div><br>
+            <p class="center" style="color: #fff; font-size: 16px;"><i><b>PROPERties </b> :Copyrights Reserved</i></p>
+         </div>
+      </footer><!--footer end-->
+  </body>
+  </html>
