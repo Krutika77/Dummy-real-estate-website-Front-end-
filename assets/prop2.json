@@ -1,0 +1,781 @@
+
+{
+	"properties": [
+		{
+			"listBuy": [
+				{
+					"id": 1,
+					"property_name": "Your home 1",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "1st june 2018",
+					"created_on": "2018-06-15 T 10:45 UTC",
+					"map_location": {
+						"lat": "44.968046",
+						"lng": "-94.420307"
+					},
+					"agent": {
+						"agent_name": "David Nester",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a1.jpg"
+					},
+					"property_address": "7194 East St. Hamden, CT 06514",
+					"property_image": "assets/images/buy/b1.jpg",
+					"built_up": "250 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 1
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 2,
+					"property_name": "Your home 2",
+					"property_type": "land",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "10th june 2018",
+					"created_on": "2018-07-5 T 2:30 UTC",
+					"map_location": {
+						"lat": "-52.49706",
+						"lng": "139.30683"
+					},
+					"agent": {
+						"agent_name": "Kunal Sharma",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a2.jpg"
+					},
+					"property_address": "7276 Mamoth road Cherry hill, NJ 08003",
+					"property_image": "assets/images/buy/b2.jpg",
+					"built_up": "400 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "0",
+					"number_of_washrooms": "0",
+					"number_of_garage": "0",
+					"property_price": "5000000"
+            },
+				{
+					"id": 3,
+					"property_name": "Your home 3",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "15th june 2018",
+					"created_on": "2018-04-15 T 12:30 UTC",
+					"map_location": {
+						"lat": "14.68571",
+						"lng": "-179.97579"
+					},
+					"agent": {
+						"agent_name": "Dipak Sharma",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "12 Saxon Drive Howard Beach , Ny 11414",
+					"property_image": "assets/images/buy/b3.jpg",
+					"built_up": "275 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 1
+					},
+					"number_of_bedrooms": "3",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "2500000"
+            },
+				{
+					"id": 4,
+					"property_name": "Your home 4",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "12th march 2018",
+					"created_on": "2018-06-15 T 10:30 UTC",
+					"map_location": {
+						"lat": "18.08054",
+						"lng": "164.48717"
+					},
+					"agent": {
+						"agent_name": "Dipak Sharma",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a4.jpg"
+					},
+					"property_address": "13 Howard Beach Saxon drive , Ny 13514",
+					"property_image": "assets/images/buy/b4.jpg",
+					"built_up": "300 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 1
+					},
+					"number_of_bedrooms": "3",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "2500000"
+            },
+				{
+					"id": 5,
+					"property_name": "Your home 5",
+					"property_type": "land",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "20th April 2018",
+					"created_on": "2018-11-15 T 3:33 UTC",
+					"map_location": {
+						"lat": "31.88062",
+						"lng": "-3.65818"
+					},
+					"agent": {
+						"agent_name": "Ankit Lal",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a5.jpg"
+					},
+					"property_address": "12 Saxon Marine Howard Beach , La 11414",
+					"property_image": "assets/images/buy/b5.jpg",
+					"built_up": "280 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "0",
+					"number_of_washrooms": "0",
+					"number_of_garage": "0",
+					"property_price": "5500000"
+            },
+				{
+					"id": 6,
+					"property_name": "Your home 6",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "15th june 2018",
+					"created_on": "2018-1-15 T 6:33 UTC",
+					"map_location": {
+						"lat": "-51.09700",
+						"lng": "-42.25121"
+					},
+					"agent": {
+						"agent_name": "Akanksha Sharma",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a1.jpg"
+					},
+					"property_address": "3 Saxon Drive Howard University , Us 11414",
+					"property_image": "assets/images/buy/b6.jpg",
+					"built_up": "275 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 1,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 1
+					},
+					"number_of_bedrooms": "3",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3500000"
+            },
+				{
+					"id": 7,
+					"property_name": "Your home 7",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "1st june 2018",
+					"created_on": "2018-07-15 T 5:33 UTC",
+					"map_location": {
+						"lat": "62.38651",
+						"lng": "9.29453"
+					},
+					"agent": {
+						"agent_name": "David Nester",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "9 Heather Street Geneva , IL 60134",
+					"property_image": "assets/images/buy/b7.jpg",
+					"built_up": "350 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 1
+					},
+					"number_of_bedrooms": "3",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "2200000"
+            },
+				{
+					"id": 8,
+					"property_name": "Your home 8",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "1st july 2018",
+					"created_on": "2018-04-15 T 6:05 UTC",
+					"map_location": {
+						"lat": "62.38651",
+						"lng": "9.29453"
+					},
+					"agent": {
+						"agent_name": "David Nester",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a5.jpg"
+					},
+					"property_address": "62 Son Street Rookline, MA 02946",
+					"agent_name": "David Nester",
+					"property_image": "assets/images/buy/b8.jpg",
+					"built_up": "250 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 9,
+					"property_name": "Your home 9",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "1st july 2018",
+					"created_on": "2018-02-15 T 3:05 UTC",
+					"map_location": {
+						"lat": "38.06612",
+						"lng": "137.78235"
+					},
+					"agent": {
+						"agent_name": "Atul Varma",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a2.jpg"
+					},
+					"property_address": "2 Cason Street Brooline, CA 02496",
+					"property_image": "assets/images/buy/b9.jpg",
+					"built_up": "256 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 10,
+					"property_name": "Your home 10",
+					"property_type": "land",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "21st march 2018",
+					"created_on": "2018-12-25 T 8:25 UTC",
+					"map_location": {
+						"lat": "4.95828",
+						"lng": "81.85287"
+					},
+					"agent": {
+						"agent_name": "Deepanshu Singh",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a4.jpg"
+					},
+					"property_address": "62 Caron Street Broobine, ZA 01446",
+					"property_image": "assets/images/buy/b10.jpg",
+					"built_up": "280 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 11,
+					"property_name": "Your home 11",
+					"property_type": "land",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "21st may 2018",
+					"created_on": "2018-2-25 T 2:25 UTC",
+					"map_location": {
+						"lat": "-28.84131",
+						"lng": "68.26560"
+					},
+					"agent": {
+						"agent_name": "Amit Singh",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "62 Bison Street Cooline, MA 04446",
+					"property_image": "assets/images/buy/b11.jpg",
+					"built_up": "280 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 12,
+					"property_name": "Your home 12",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "21st may 2018",
+					"created_on": "2018-10-05 T 8:06 UTC",
+					"map_location": {
+						"lat": "61.75333",
+						"lng": "-80.24183"
+					},
+					"agent": {
+						"agent_name": "Vikas Mishra",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a5.jpg"
+					},
+					"property_address": "6 Bison Street, HA 08446",
+					"property_image": "assets/images/buy/b12.jpg",
+					"built_up": "280 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 1,
+						"elevator": 1,
+						"gym": 1
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 13,
+					"property_name": "Your home 13",
+					"property_type": "land",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "22nd aug 2018",
+					"created_on": "2018-2-25 T 2:25 UTC",
+					"map_location": {
+						"lat": "-66.12777",
+						"lng": "125.14094"
+					},
+					"agent": {
+						"agent_name": "Ronit Choudhary",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a1.jpg"
+					},
+					"property_address": "23 Erison Street Moonline, MA 08446",
+					"property_image": "assets/images/buy/b13.jpg",
+					"built_up": "280 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 14,
+					"property_name": "Your home 14",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "10th April 2018",
+					"created_on": "2018-3-25 T 2:25 UTC",
+					"map_location": {
+						"lat": "15.10930",
+						"lng": "-72.70988"
+					},
+					"agent": {
+						"agent_name": "Rishika Khanna",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "62 Bison Street Cooline, MA 04446",
+					"property_image": "assets/images/buy/b14.jpg",
+					"built_up": "280 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 1,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            },
+				{
+					"id": 15,
+					"property_name": "Your home 15",
+					"property_type": "land",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "21st may 2018",
+					"created_on": "2018-2-25 T 2:25 UTC",
+					"map_location": {
+						"lat": "-54.58844",
+						"lng": "50.65916"
+					},
+					"agent": {
+						"agent_name": "Amit Singh",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a2.jpg"
+					},
+					"property_address": "62 Rock Street Cooline, MA 07846",
+					"property_image": "assets/images/buy/b15.jpg",
+					"built_up": "350 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"property_price": "3000000"
+            }
+         ],
+			"listRent": [
+				{
+					"id": 1,
+					"property_name": "Your home 16",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "2nd may 2018",
+					"created_on": "2018-1-20 T 6:25 UTC",
+					"map_location": {
+						"lat": "-6.72758",
+						"lng": "-70.68139"
+					},
+					"agent": {
+						"agent_name": "Anisha Mittal",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a5.jpg"
+					},
+					"property_address": "61 Rock bridge Cooline, NA 07746",
+					"property_image": "assets/images/rent/r1.jpg",
+					"built_up": "320 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 1,
+						"elevator": 1,
+						"gym": 1
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "30000"
+                  },
+				{
+					"id": 2,
+					"property_name": "Your home 17",
+					"property_type": "office",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "3rd march 2018",
+					"created_on": "2018-2-20 T 5:25 UTC",
+					"map_location": {
+						"lat": " 0.32091",
+						"lng": "-131.29808"
+					},
+					"agent": {
+						"agent_name": "David Nester",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a1.jpg"
+					},
+					"property_address": "2 Stone Street Cooline, MA 07856",
+					"property_image": "assets/images/rent/r2.jpg",
+					"built_up": "220 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 1,
+						"elevator": 1,
+						"gym": 1
+					},
+					"rent_at": "40000"
+                  },
+				{
+					"id": 3,
+					"property_name": "Your home 18",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "3rd aug 2018",
+					"created_on": "2018-5-20 T 7:25 UTC",
+					"map_location": {
+						"lat": "48.39708",
+						"lng": "100.92849"
+					},
+					"agent": {
+						"agent_name": "Rockwell Monton",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "462 Rock Street Cookline, MA 07846",
+					"property_image": "assets/images/rent/r3.jpg",
+					"built_up": "320 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "25000"
+                  },
+				{
+					"id": 4,
+					"property_name": "Your home 19",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "23rd aug 2018",
+					"created_on": "2018-6-20 T 7:25 UTC",
+					"map_location": {
+						"lat": "-22.97772",
+						"lng": "-99.45486"
+					},
+					"agent": {
+						"agent_name": "Rockwell Monton",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a1.jpg"
+					},
+					"property_address": "72 Rock Willow Cooline, LA 07846",
+					"property_image": "assets/images/rent/r4.jpg",
+					"built_up": "320 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "20000"
+                  },
+				{
+					"id": 5,
+					"property_name": "Your home 20",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "2nd july 2018",
+					"created_on": "2018-2-20 T 7:25 UTC",
+					"map_location": {
+						"lat": "60.62973",
+						"lng": "148.14647"
+					},
+					"agent": {
+						"agent_name": "Ankit Singhall",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a2.jpg"
+					},
+					"property_address": "642 Rock Street Dooline, MA 07856",
+					"property_image": "assets/images/rent/r5.jpg",
+					"built_up": "320 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "20000"
+                  },
+				{
+					"id": 6,
+					"property_name": "Your home 21",
+					"property_type": "House",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "3rd july 2018",
+					"created_on": "2017-12-20 T 7:25 UTC",
+					"map_location": {
+						"lat": "-69.03513",
+						"lng": "80.63488"
+					},
+					"agent": {
+						"agent_name": "Ankit Singhall",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "64 Stone Street Dooline, MA 07856",
+					"property_image": "assets/images/rent/r6.jpg",
+					"built_up": "220 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 0,
+						"elevator": 0,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "24000"
+                  },
+				{
+					"id": 7,
+					"property_name": "Your home 22",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "3rd july 2018",
+					"created_on": "2018-02-20 T 7:02 UTC",
+					"map_location": {
+						"lat": "12.19971",
+						"lng": "-4.88020"
+					},
+					"agent": {
+						"agent_name": "Deepak Singhall",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a4.jpg"
+					},
+					"property_address": "42 Rock Street Makeline, MA 08856",
+					"property_image": "assets/images/rent/r7.jpg",
+					"built_up": "220 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 1,
+						"elevator": 1,
+						"gym": 1
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "54000"
+                  },
+				{
+					"id": 8,
+					"property_name": "Your home 23",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "13th july 2018",
+					"created_on": "2018-05-20 T 7:02 UTC",
+					"map_location": {
+						"lat": "-5.51232",
+						"lng": "107.10429"
+					},
+					"agent": {
+						"agent_name": "Deepak Sukanta",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a3.jpg"
+					},
+					"property_address": "42 Rock Street Makeline, MA 08856",
+					"property_image": "assets/images/rent/r8.jpg",
+					"built_up": "220 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "34000"
+                  },
+				{
+					"id": 9,
+					"property_name": "Your home 24",
+					"property_type": "office",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "13th july 2018",
+					"created_on": "2018-04-20 T 7:02 UTC",
+					"map_location": {
+						"lat": "40.64280",
+						"lng": "53.01862"
+					},
+					"agent": {
+						"agent_name": "Dipal Sukanta",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a2.jpg"
+					},
+					"property_address": "342 Rock Street Makeline, OA 08856",
+					"property_image": "assets/images/rent/r9.jpg",
+					"built_up": "120 sq ft",
+					"amenities": {
+						"parking": 0,
+						"wifi": 0,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 0
+					},
+					"rent_at": "34000"
+                  },
+				{
+					"id": 10,
+					"property_name": "Your home 25",
+					"property_type": "apartment",
+					"property_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit, tellus dui aliquet est, ac cursus velit erat et est. Quisque vitae tortor nibh. Aliquam ornare, augue ac pulvinar euismod, mi felis cursus nisl, non ultrices lacus turpis sit amet lacus. Vestibulum in lacus ut augue tincidunt lobortis id quis mauris. Morbi at fringilla lectus, non consectetur ante. Duis eleifend quis eros eu vulputate. Praesent sit amet dolor eros. Ut aliquam eros sed ante facilisis, ac venenatis diam feugiat.</p><p>Phasellus est massa, luctus eget volutpat id, semper nec elit. Nam ligula nunc, pharetra ac sodales porta, consectetur in est. Suspendisse mauris mauris, sagittis eu tristique ac, lacinia sed nisl. Nulla ut eros ac erat dignissim pellentesque sit amet ut tellus. Nunc at risus sed lacus commodo fringilla. Curabitur laoreet condimentum facilisis. Donec eget pellentesque massa.</p> ",
+					"property_available_from": "23rd june 2018",
+					"created_on": "2018-3-20 T 7:25 UTC",
+					"map_location": {
+						"lat": "-32.85441",
+						"lng": "26.91474"
+					},
+					"agent": {
+						"agent_name": "Rockwell Snyder",
+						"agent_bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales, velit at laoreet hendrerit</p>",
+						"agent_image": "assets/images/agents/a5.jpg"
+					},
+					"property_address": "62 Rock Street Cooline, MA 07846",
+					"property_image": "assets/images/rent/r10.jpg",
+					"built_up": "320 sq ft",
+					"amenities": {
+						"parking": 1,
+						"wifi": 1,
+						"community_hall": 0,
+						"elevator": 1,
+						"gym": 0
+					},
+					"number_of_bedrooms": "2",
+					"number_of_washrooms": "2",
+					"number_of_garage": "1",
+					"rent_at": "35000"
+                  }
+               ]
+            }
+   ]
+}
