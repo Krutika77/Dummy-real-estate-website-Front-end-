@@ -1,0 +1,300 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="assets/css/chstyle.css"/><!--For header and footer that is common to all pages-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="modules/css/bootstrap.min.css">
+      <script src="modules/js/jquery.min.js"></script>
+      <script src="modules/js/popper.min.js"></script>
+      <script src="modules/js/bootstrap.min.js"></script>
+      <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         function myFunct()
+         {
+         document.getElementById("myDropdown2").classList.toggle("show");
+         }
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+      <style>
+      .main-search {
+			background-image: url("assets/images/srchimg.png");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height: 30rem;
+			position: relative;
+			}
+        .main-search-bar {
+			text-align: center;
+			position: absolute;
+			top: 82%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+         .nb { /*Buy, Rent and Search buttons*/
+         background-color: transparent;
+         border: 2px solid #fff;
+         color: #fff;
+         margin-right: 10px;
+         }
+         
+          footer {
+      background-image: url("assets/images/footerbk.png");
+      opacity: 0.95;
+      background-size: 100vh;
+      background-color: #181a21;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer li a {
+      color: rgba(255, 255, 255, 1);
+      margin: auto 2rem;
+    }
+
+    footer .icon {
+      margin-right: 25px;
+      height: 20px;
+      float: left;
+    }
+
+    footer a:hover {
+      color: rgba(255, 255, 255, 1);
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 1);
+    }
+
+      </style>
+   </head>
+   <body>
+       <!--header starts-->
+      <header>
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="width: 99.9%;">
+            <!--Fixed navigation bar-->
+            <a class="navbar-brand" href="#">PROPERties.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+               <ul class="navbar-nav">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="index.html">Home
+                     <span class="sr-only">(current)</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="login.html">Login | Register</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact_us.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <!--Dropdowm list for currency and languages-->
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#8377;</a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item active" href="#">&#8377;</a>
+                        <a class="dropdown-item" href="#">&#36;</a>
+                        <a class="dropdown-item" href="#">&#8364;</a>
+                        <a class="dropdown-item" href="#">&#163;</a>
+                        <a class="dropdown-item" href="#">&#165;</a>
+                     </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">English</a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item active" href="#">English</a>
+                        <a class="dropdown-item" href="#">हिंदी</a>
+                        <a class="dropdown-item" href="#">German</a>
+                        <a class="dropdown-item" href="#">Français</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header><!--header ends-->
+      <div style="box-shadow: 0 0 20px 0 grey;">
+      <!--Segregated search bar for home page-->
+      <div class="main-search">
+         <div class="main-search-bar">
+            <form class="form-inline mt-1">
+               <a href="property_buying.html" class="btn nb" role="button">Buy</a><!--Will open up to property listing page-->
+               <a href="property_renting.html" class="btn nb" role="button">Rent</a>
+               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+               <button class="btn nb" type="submit">Search</button><!--Will open up to property listing page-->
+            </form>
+         </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+          <!--featured properties start-->
+      <div>
+         <center>
+            <h2>Featured Properties</h2>
+            <br>
+            <div style="background-color: #f5f5f5; ">
+               <p class="container"><br>With award-winning residential, commercial and leisure properties across the Middle East, to date, DAMAC has delivered over 20,230 homes and has a development portfolio of more than 44,000 units at various stages of planning and progress, asserting its place as a leading luxury developer in the region.</p>
+               <br
+            </div>
+         </center>
+      </div><!--featured properties ends-->
+      <br>
+      <hr>
+      <br><!--Slider displaying images of some featured properties-->
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="box-shadow: 0 0 20px 0 grey, 0 0 20px 0 grey;">
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img class="d-block w-100" src="assets/images/a.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100" src="assets/images/b.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+               <img class="d-block w-100" src="assets/images/c.jpg" alt="Third slide">
+            </div>
+         </div>
+         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+         </a>
+      </div>
+      <br>
+      <hr>
+      <br>
+          <!--blog starts-->
+      <div class="row">
+         <div class="col-md-12">
+            <h2 style="text-align: center;">Blogs</h2>
+            <div style="background-color: #f5f5f5; ">
+               <p class="container" style="text-align: center;"><br>We are certain the financial benefits of our lighting projects will help your bottom line, but we also got into this business to conserve the world’s natural resources and create a better planet for our children and grandchildren. Everything we do considers the environment – from designing the most efficient lighting system for your unique needs to the careful disposal of all discarded lamps compliant with EPA standards. We pride ourselves on the work we do to contribute to the efforts to improve the delicate balance of our planet.</p>
+               <br>
+            </div>
+         </div>
+      </div>  <!--blog ends-->
+      <br>
+      <hr>
+      <br>
+          <div style="background-color: #f5f5f5; box-shadow: 0 0 20px 0 grey, 0 0 20px 0 grey;">
+         <br>
+         <div class="row">
+            <!--Displaying three recent blocks-->
+            <div class="col-md-12 col-xs-12">
+               <div class="blogarticles">
+                  <p class="bl"><img src="assets/images/blog.jpg" style="height: 95px; border-radius: 40px;" align="left"><i>    Article by Mr.________ on how eco-engineering helps and its positive effects on future.</i></p>
+                  <p class="bl"><img src="assets/images/blog3.jpg" style="height: 95px; border-radius: 40px;" aling="left"><i>   Coining eco-engineering.</i></p>
+                  <p class="bl"><img src="assets/images/blog2.png" style="height: 95px; border-radius: 40px;" align="left"><i>    Upcomming Top projects and rate of development- accepting and influencing change.</i></p>
+               </div>
+            </div>
+         </div>
+         <br>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <div class="container">
+         <h2 style="text-align: center;">Wondering why <b>PROPERties?</b></h2>
+         <br><br>
+         <div class="card-deck">
+            <!--'WHY US' using bootstrap cards-->
+            <div class="card"  style="box-shadow: 0 0 20px 0 grey, 0 0 20px 0 grey;">
+               <img class="card-img-top" src="assets/images/economy.jpg">
+               <div class="card-body">
+                  <h5 class="card-title">Financial benefits</h5>
+                  <p class="card-text">We know the value of your money</p>
+                  <p class="card-text"><small class="text-muted">Get assured prices and trusted properties here.27,000 new properties posted daily, making us the biggest platform to sell & rent properties.12 million users visit us every month for their buying and renting needs.</small></p>
+               </div>
+            </div>
+            <div class="card"  style="box-shadow: 0 0 20px 0 grey, 0 0 20px 0 grey;">
+               <img class="card-img-top" src="assets/images/employee.jpg">
+               <div class="card-body">
+                  <h5 class="card-title">Get the best advice here.</h5>
+                  <p class="card-text">Don't worry about combersome paperworks..</p>
+                  <p class="card-text"><small class="text-muted">Get expert advice right from brokrage till registration.</small></p>
+               </div>
+            </div>
+            <div class="card"  style="box-shadow: 0 0 20px 0 grey, 0 0 20px 0 grey;">
+               <img class="card-img-top" src="assets/images/time.jpg">
+               <div class="card-body">
+                  <h5 class="card-title">No more fiddling.</h5>
+                  <p class="card-text">One destination for all your possible real-estate requirements!</p>
+                  <p class="card-text"><small class="text-muted">Get exclusive properties here and select for your ideal one.</small></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <center>
+         <h2>Testimonials</h2>
+         <div style="background-color: #f5f5f5; ">
+            <p class="container"><br>We see our customers as invited guests to a party, and we are the hosts. It’s our job every day to make every important aspect of the customer experience a little bit better.Customers may forget what you said but they’ll never forget how you made them feel. There is a spiritual aspect to our lives – when we give, we receive – when a business does something good for somebody, that somebody feels good about them! </p>
+            <br>
+         </div>
+      </center>
+      <br>
+      <hr>
+      <br>
+          <!--testimonals starts-->
+      <div style="background-color: #f5f5f5; box-shadow: 0 0 20px 0 grey, 0 0 20px 0 grey;">
+         <br>
+         <div class="row">
+            <div class="col-md-12 col-xs-12">
+               <div class="testimonials">
+                  <!--Displaying three fixed testimonials-->
+                  <p class="b2" style="text-align: center;"><img src="assets/images/testimonial1.jpg" style="height: 150px; border-radius: 40px; float: left;" align="left"><i>"They have a clear understanding of what investors are looking for when purchasing properties.I was very pleased with their services."</i></p>
+                  <p class="b2" style="text-align: center;"><img src="assets/images/testimonial2.png" style="height: 150px; border-radius: 40px; float: left;" aling="left"><i>"My husband and I would not have been able to get through the process without their knowledge of neighborhoods, home values, and the home buying process."</i></p>
+                  <p class="b2" style="text-align: center;"><img src="assets/images/testimonial3.jpg" style="height: 150px; border-radius: 40px; float: left;" align="left"><i>"PROPERties helped me get the house ready for listing. They spent a lot of time showing it and promoting it and made sure all the paperwork was handled properly."</i></p>
+               </div>
+            </div>
+         </div>
+         <br>
+      </div> <!--testimonal ends-->
+      <br>
+          <!--footer starts-->
+    <footer>
+         <div style="text-align: center; padding: 20px; font-size: 20px;">
+         <ul>
+            <li class="list-inline-item txt"><a href="about_us.html">About us</a></li>
+            <li class="list-inline-item txt"><a href="contact_us.html">Customer Care</a></li>
+            <li class="list-inline-item txt"><a href="terms_and_conditions.html">Terms-and-Conditions</a></li>
+            <li class="list-inline-item txt"><a href="privacy_policy.html">Privacy Policy</a></li>
+         </ul>
+         <hr color="#989eb4" width="70%">
+         <br>
+         <div>
+            <ul class="list-inline">
+               <li class="list-inline-item"><a href="#"><img src="assets/images/tw.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/fb.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/linkedin.png" class="zoom center"></a></li>
+            </ul>
+            </div><br>
+            <p class="center" style="color: #fff; font-size: 16px;"><i><b>PROPERties </b> :Copyrights Reserved</i></p>
+         </div>
+      </footer><!--footer end-->
+   </body>
+</html>

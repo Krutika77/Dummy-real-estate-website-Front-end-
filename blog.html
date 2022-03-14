@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>PROPERties | Blog Listing</title>
+
+      <link rel="stylesheet" href="assets/css/chstyle.css"/><!--For header and footer that is common to all pages-->
+       <link rel="stylesheet" href="assets/css/style.css"/>
+       <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <script>
+         /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         function myFunct()
+         {
+         document.getElementById("myDropdown2").classList.toggle("show");
+         }
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+      <style>
+         .nb { /*Buy, Rent and Search buttons*/
+         background-color: transparent;
+         border: 2px solid #fff;
+         color: #fff;
+         margin-right: 10px;
+         }
+
+		footer {
+			background-image: url("assets/images/footerbk.png");
+			opacity: 0.95;
+			background-size: 100vh;
+			background-color: #181a21;
+			padding: 1rem;
+			text-align: center;
+		}
+
+		footer li a {
+			color: rgba(255, 255, 255, 1);
+			margin: auto 2rem;
+		}
+
+		footer .icon {
+			margin-right: 25px;
+			height: 20px;
+			float: left;
+		}
+
+		footer a:hover {
+			color: rgba(255, 255, 255, 1);
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+
+	
+      </style>
+   </head>
+   <body>
+      <!--header starts-->
+      <header>
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <!--Fixed navigation bar-->
+            <a class="navbar-brand" href="#">PROPERties.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+             <form class="form-inline mt-1">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+               <ul class="navbar-nav">
+                  <li class="nav-item ">
+                     <a class="nav-link" href="index.html">Home
+                     <span class="sr-only">(current)</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="login.html">Login | Register</a>
+                  </li>
+                  <li class="nav-item active">
+                     <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact_us.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <!--Dropdowm list for currency and languages-->
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#8377;</a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item active" href="#">&#8377;</a>
+                        <a class="dropdown-item" href="#">&#36;</a>
+                        <a class="dropdown-item" href="#">&#8364;</a>
+                        <a class="dropdown-item" href="#">&#163;</a>
+                        <a class="dropdown-item" href="#">&#165;</a>
+                     </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">English</a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item active" href="#">English</a>
+                        <a class="dropdown-item" href="#">हिंदी</a>
+                        <a class="dropdown-item" href="#">German</a>
+                        <a class="dropdown-item" href="#">Français</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <!--header ends-->
+      <!--1 pannel -->
+      
+      <div class="container">
+         <div class="row" style="margin-top: 50px;">
+            <div class="col-md-12">
+            	
+               <h1>Blogs</h1>
+            </div>
+         </div>
+         <hr>
+
+         <div class="card w-100" style="margin-top: 10px;">
+            <div class="row">
+               <div class="col-md-6" style="text-align: center;margin-top: 30px;">
+                  <h1>Elon musk</h1>
+                  <h5><span class="glyphicon glyphicon-time"></span> Post by Yo, june 28, 2018.</h5>
+                  <h5><span class="badge badge-pill badge-primary">Primary</span><span class="badge badge-pill badge-secondary">Primary</span></h5>
+                  <br>
+               </div>
+               <div class="col-6 pull-right" >
+                  <div class="hover01">
+                     <figure><img src="assets/images/im1.jpg" class="rounded-circle" style="margin-top: 30px;margin-left: 300px; width:150px;height:150px;"></figure>
+                  </div>
+               </div>
+               <hr>
+               <!--1 pannel---para -->
+               <div class="col-md-12" style="text-align: justify-all;">
+                  <p>
+                  <blockquote class="blockquote text-center">
+                     <p><span style="font-size: 30px;">&#34</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <span style="font-size: 30px;">&#34</span>
+                     </p>
+                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>  <button type="button" class="btn btn-primary">
+                        Like <span class="badge badge-light"> 9
+                        </button> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Comment1" aria-expanded="false" aria-controls="Comment1">
+    Comment
+</button>
+<div class="collapse" id="Comment1">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+                        <button type="button" class="btn btn-secondary">
+                        Comment <span class="badge badge-light">25
+                        </button> <button type="button" class="btn btn-secondary">
+                        Share <span class="badge badge-light">50
+                        </button>
+                     </footer>
+                  </blockquote>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="space"></div>
+         <hr>
+         <div class="space"></div>
+         <div class="card w-100" style="margin-top: 10px;">
+            <div class="row">
+               <div class="col-md-6" style="text-align: center;margin-top: 30px;">
+                  <h1>Elon musk</h1>
+                  <h5><span class="glyphicon glyphicon-time"></span> Post by Yo, june 28, 2018.</h5>
+                  <h5><span class="badge badge-pill badge-primary">Primary</span><span class="badge badge-pill badge-secondary">Primary</span></h5>
+                  <br>
+               </div>
+               <div class="col-6 pull-right" >
+                  <div class="hover01">
+                     <figure><img src="assets/images/im1.jpg" class="rounded-circle" style="margin-top: 30px;margin-left: 300px; width:150px;height:150px;"></figure>
+                  </div>
+               </div>
+               <hr>
+               <!--1 pannel---para -->
+               <div class="col-md-12" style="text-align: justify-all;">
+                  <p>
+                  <blockquote class="blockquote text-center">
+                     <p><span style="font-size: 30px;">&#34</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <span style="font-size: 30px;">&#34</span>
+                     </p>
+                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>  <button type="button" class="btn btn-primary">
+                        Like <span class="badge badge-light"> 9
+                        </button> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Comment2" aria-expanded="false" aria-controls="Comment2">
+    Comment
+</button>
+<div class="collapse" id="Comment2">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>  <button type="button" class="btn btn-secondary">
+                        Comment <span class="badge badge-light">25
+                        </button> <button type="button" class="btn btn-secondary">
+                        Share <span class="badge badge-light">50
+                        </button>
+                     </footer>
+                  </blockquote>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="space"></div>
+         <hr>
+         <div class="space"></div>
+        <div class="card w-100" style="margin-top: 10px;">
+            <div class="row">
+               <div class="col-md-6" style="text-align: center;margin-top: 30px;">
+                  <h1>Elon musk</h1>
+                  <h5><span class="glyphicon glyphicon-time"></span> Post by Yo, june 28, 2018.</h5>
+                  <h5><span class="badge badge-pill badge-primary">Primary</span><span class="badge badge-pill badge-secondary">Primary</span></h5>
+                  <br>
+               </div>
+               <div class="col-6 pull-right" >
+                  <div class="hover01">
+                     <figure><img src="assets/images/im1.jpg" class="rounded-circle" style="margin-top: 30px;margin-left: 300px; width:150px;height:150px;"></figure>
+                  </div>
+               </div>
+               <hr>
+               <!--1 pannel---para -->
+               <div class="col-md-12" style="text-align: justify-all;">
+                  <p>
+                  <blockquote class="blockquote text-center">
+                     <p><span style="font-size: 30px;">&#34</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <span style="font-size: 30px;">&#34</span>
+                     </p>
+                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>  <button type="button" class="btn btn-primary">
+                        Like <span class="badge badge-light"> 9
+                        </button> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Comment3" aria-expanded="false" aria-controls="Comment3">
+    Comment
+</button>
+<div class="collapse" id="Comment3">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div> <button type="button" class="btn btn-secondary">
+                        Comment <span class="badge badge-light">25
+                        </button> <button type="button" class="btn btn-secondary">
+                        Share <span class="badge badge-light">50
+                        </button>
+                     </footer>
+                  </blockquote>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="space"></div>
+         <hr>
+         <div class="space"></div>
+         <div class="card w-100" style="margin-top: 10px;">
+            <div class="row">
+               <div class="col-md-6" style="text-align: center;margin-top: 30px;">
+                  <h1>Elon musk</h1>
+                  <h5><span class="glyphicon glyphicon-time"></span> Post by Yo, june 28, 2018.</h5>
+                  <h5><span class="badge badge-pill badge-primary">Primary</span><span class="badge badge-pill badge-secondary">Primary</span></h5>
+                  <br>
+               </div>
+               <div class="col-6 pull-right" >
+                  <div class="hover01">
+                     <figure><img src="assets/images/im1.jpg" class="rounded-circle" style="margin-top: 30px;margin-left: 300px; width:150px;height:150px;"></figure>
+                  </div>
+               </div>
+               <hr>
+               <!--1 pannel---para -->
+               <div class="col-md-12" style="text-align: justify-all;">
+                  <p>
+                  <blockquote class="blockquote text-center">
+                     <p><span style="font-size: 30px;">&#34</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <span style="font-size: 30px;">&#34</span>
+                     </p>
+                     <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>  <button type="button" class="btn btn-primary">
+                        Like <span class="badge badge-light"> 9</button>
+
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#Comment4" aria-expanded="false" aria-controls="Comment4">
+    Comment
+</button>
+<div class="collapse" id="Comment4">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+
+
+
+                        <button type="button" class="btn btn-secondary">
+                        Comment <span class="badge badge-light">25
+                        </button> <button type="button" class="btn btn-secondary">
+                        Share <span class="badge badge-light">50
+                        </button>
+                     </footer>
+                  </blockquote>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="space"></div>
+          
+            <nav aria-label="Page navigation example">
+               <ul class="pagination justify-content-center">
+                  <li class="page-item">
+                     <a class="page-link" href="blog.html" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="blog1.html">1</a></li>
+                  
+                  <li class="page-item">
+                     <a class="page-link" href="blog.html">Next</a>
+                  </li>
+               </ul>
+            </nav>
+         
+</div>
+      </div>
+      <!--main div for container -->
+      
+        
+      
+   </body>
+   <!--footer starts-->
+   <footer style="margin-top: 50px;">
+      <div style="text-align: center; padding: 20px; font-size: 20px;">
+         <ul>
+            <li class="list-inline-item txt"><a href="about_us.html">About us</a></li>
+            <li class="list-inline-item txt"><a href="contact_us.html">Customer Care</a></li>
+            <li class="list-inline-item txt"><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+            <li class="list-inline-item txt"><a href="privacy_policy.html">Privacy Policy</a></li>
+         </ul>
+         <hr color="#989eb4" width="70%">
+         <br>
+         <div>
+            <ul class="list-inline">
+               <li class="list-inline-item"><a href="#"><img src="assets/images/tw.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/fb.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/linkedin.png" class="zoom center"></a></li>
+            </ul>
+         </div>
+         <br>
+         <p class="center" style="color: #fff; font-size: 16px;"><i><b>PROPERties </b> :Copyrights Reserved</i></p>
+      </div>
+   </footer>
+   <!--footer ends-->
+</html>

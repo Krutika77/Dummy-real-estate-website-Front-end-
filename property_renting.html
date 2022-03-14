@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PROPERties | Rent Properties</title>
+    <!-- <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/chstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
+
+     <link rel="stylesheet" href="modules/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/chstyle.css">
+      <script type="modules/js/bootstrap.js"></script>
+      <script type="modules/js/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      
+      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      
+    <script>
+        /* When the user clicks on the button, 
+                                 toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function myFunct() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nb {
+            /*Buy, Rent and Search buttons*/
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+
+    footer {
+      background-image: url("assets/images/footerbk.png");
+      opacity: 0.95;
+      background-size: 100vh;
+      background-color: #181a21;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer li a {
+      color: rgba(255, 255, 255, 1);
+      margin: auto 2rem;
+    }
+
+    footer .icon {
+      margin-right: 25px;
+      height: 20px;
+      float: left;
+    }
+
+    footer a:hover {
+      color: rgba(255, 255, 255, 1);
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 1);
+    }
+
+    
+
+  
+    </style>
+</head>
+
+<body>
+    <!--script starts-->
+    <script>
+        $(document).ready(function () {
+            var start = 0;
+            var end = 4;
+            var count=0;
+    $("#p1").click(function(){
+          sortAndDisplay();
+      });
+    $("#p2").click(function(){
+          sortAndDisplay1();
+      });
+    $("#p3").click(function(){
+          sortAndDisplay2();
+      });
+
+     $("#t1").click(function(){
+          typeAndDisplay();
+      });
+    $("#t2").click(function(){
+          typeAndDisplay1();
+      });
+   
+
+     $("#b1").click(function(){
+         bedtypeAndDisplay();
+      });
+  
+
+
+            $.ajax({
+                dataType: 'json',
+                url: "assets/prop2.json",
+                method: "GET"
+            }).done(function (data) {
+                console.log(data);
+                printProp(start, end);
+                $("#next").click(function () {
+                    if ((end + 5) < data.properties[0].listRent.length) {
+                        end += 5;
+                    } else {
+                        end = data.properties[0].listRent.length - 1;
+                    }
+
+                    if (!((start + 5) > end)) {
+                        start += 5;
+                    }
+
+                    if ((start >= 0) && (end < data.properties[0].listRent.length)) {
+                        printProp(start, end);
+                    }
+                    console.log("Previous", start, end);
+                });
+
+                $("#prev").click(function () {
+                    if ((start - 5) < 0) {
+                        start = 0;
+                    } else {
+                        start -= 5;
+                    }
+
+                    if (!((end - 5) < start)) {
+                        end -= 5;
+                    }
+                    if ((start >= 0) && (end < data.properties[0].listRent.length)) {
+                        console.log("Previous", start, end);
+                        printProp(start, end);
+                    }
+                });
+
+                function printProp(start, end) {
+                    var str = '';
+                    console.log("Inside Print");
+                    console.log(start);
+                    console.log(end);
+                    $("#list").empty();
+                    for (var i = start; i <= end; i++) {
+                         str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+                    }
+                    $("#list").append(str);
+                };
+
+            });
+
+            $("#list").on("click", ".rm", function () {
+                var clicked = $(this).parent();
+                var id = clicked.attr("data-prop-id");
+                var ob = {
+                    "prop_id": id - 1,
+                    "page": "listRent"
+                };
+                console.log($.type(ob));
+                localStorage.setItem("property_object", JSON.stringify(ob));
+                console.log(localStorage.getItem("property_object"));
+                window.open("property_single_renting.html", "_blank");
+            });
+
+
+            function sortAndDisplay() {
+    $.ajax({
+        dataType: 'json',
+        url: "assets/prop2.json",
+        method: "GET"
+    }).done(function (data) {
+        console.log(data);
+        var str = '';
+        
+
+        for (var i = 0; i < data.properties[0].listRent.length; i++) {
+            var a = parseInt(data.properties[0].listRent[i].rent_at);
+            
+
+            if ((a > 0) && (a <= 2500000)) {
+
+
+                str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+            }
+
+        }
+
+        $("#list").empty();
+        $("#list").append(str);
+    });
+   };
+
+
+   function sortAndDisplay1() {
+    $.ajax({
+        dataType: 'json',
+        url: "assets/prop2.json",
+        method: "GET"
+    }).done(function (data) {
+        console.log(data);
+        var str = '';
+        
+
+        for (var i = 0; i < data.properties[0].listRent.length; i++) {
+            var a = parseInt(data.properties[0].listRent[i].rent_at);
+            
+
+            if ((a > 2500000) && (a <= 3500000)) {
+
+
+               str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+            }
+
+        }
+
+        $("#list").empty();
+        $("#list").append(str);
+    });
+};
+
+  
+
+   function sortAndDisplay2() {
+    $.ajax({
+        dataType: 'json',
+        url: "assets/prop2.json",
+        method: "GET"
+    }).done(function (data) {
+        console.log(data);
+        var str = '';
+        
+
+        for (var i = 0; i < data.properties[0].listRent.length; i++) {
+            var a = parseInt(data.properties[0].listRent[i].rent_at);
+            
+
+            if (a > 3500000)  {
+
+
+  str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+            }
+
+        }
+
+        $("#list").empty();
+        $("#list").append(str);
+    });
+};     
+
+
+       function typeAndDisplay() {
+    $.ajax({
+        dataType: 'json',
+        url: "assets/prop2.json",
+        method: "GET"
+    }).done(function (data) {
+        console.log(data);
+        var str = '';
+        
+
+        for (var i = 0; i < data.properties[0].listRent.length; i++) {
+              var a=data.properties[0].listRent[i].property_type;
+               
+               
+                  if(a == 'House') {
+
+
+                str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+            }
+
+        }
+
+        $("#list").empty();
+        $("#list").append(str);
+    });
+};
+  function typeAndDisplay1() {
+    $.ajax({
+        dataType: 'json',
+        url: "assets/prop2.json",
+        method: "GET"
+    }).done(function (data) {
+        console.log(data);
+        var str = '';
+        
+
+        for (var i = 0; i < data.properties[0].listRent.length; i++) {
+              var a=data.properties[0].listRent[i].property_type;
+               
+               
+                  if(a == 'apartment') {
+
+
+                str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+            }
+
+        }
+
+        $("#list").empty();
+        $("#list").append(str);
+    });
+};
+
+
+
+
+function bedtypeAndDisplay() {
+    $.ajax({
+        dataType: 'json',
+        url: "assets/prop2.json",
+        method: "GET"
+    }).done(function (data) {
+        console.log(data);
+        var str = '';
+        
+
+        for (var i = 0; i < data.properties[0].listRent.length; i++) {
+              var a=parseInt(data.properties[0].listRent[i].number_of_bedrooms);
+               var b=data.properties[0].listRent[i].property_type;
+               
+               
+                  if((a == 2 )&& (b!= 'land') ){
+
+
+                str += '<div class="card"><h3 class="card-header" id="heading">' + data.properties[0].listRent[i].property_name + '</h3><div class="card-body"><div class="row"><div class="col"><div class="showcase-left"><img src="' + data.properties[0].listRent[i].property_image + '" style="width:35rem;height:20rem;"></div></div><div class="col-1"><div class="outer"><div class="inner"></div></div></div><div class="col"><div class="showcase-right"><div class="card" style="padding: 2rem;" data-prop-id="' + data.properties[0].listRent[i].id + '"><p>' + 'Property Type is: ' + data.properties[0].listRent[i].property_type + '<br />' + 
+                        'Property Address: ' + data.properties[0].listRent[i].property_address + '<br />' +
+                            'Built-up Area: ' + data.properties[0].listRent[i].built_up + '<br />' +
+                            'Available from: ' + data.properties[0].listRent[i].property_available_from + '<br />' +
+                            'Agent name: ' + data.properties[0].listRent[i].agent.agent_name + '<br />' +
+                            'Price: ' + data.properties[0].listRent[i].property_price + '<br />' +
+                        '</p><br><a href="#" class="rm btn btn-primary btn-lg" id="click-here" target="_blank" role="button">Read More</a></div></div></div></div></div></div><br>';
+            }
+
+        }
+
+        $("#list").empty();
+        $("#list").append(str);
+    });
+};
+       
+        });
+    </script>
+    <!--script ends-->
+    <!--header starts-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <!--Fixed navigation bar-->
+            <a class="navbar-brand" href="#">PROPERties.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+             <form class="form-inline mt-1">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                     <span class="sr-only">(current)</span>
+                     </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login | Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                    </li>
+                   <li class="nav-item dropdown">
+                          <!--Dropdowm list for currency and languages-->
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#8377;</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item active" href="#">&#8377;</a>
+                            <a class="dropdown-item" href="#">&#36;</a>
+                            <a class="dropdown-item" href="#">&#8364;</a>
+                            <a class="dropdown-item" href="#">&#163;</a>
+                            <a class="dropdown-item" href="#">&#165;</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">English</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item active" href="#">English</a>
+                            <a class="dropdown-item" href="#">हिंदी</a>
+                            <a class="dropdown-item" href="#">German</a>
+                            <a class="dropdown-item" href="#">Français</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header><!--header ends-->
+    <!--1 pannel -->
+
+    <div class="container-fluid">
+        <div style="margin-top: 70px;">
+            <div class="filtr" style="box-shadow: 0 0 20px 0 grey;">
+                <div class="col-sm-12" style="text-align: center; background-color: #181a21; border-radius: 5px; padding: 10px;">
+                    <h1 style="color: #fff;"><i>You select, we search..</i></h1>
+                </div>
+                <div class="col-md-4" style="float: left; padding-left: 170px; padding-top: 40px;">
+                    <h4>Price:</h4>
+                    <form>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input id="p1" type="checkbox" value=""> 1 - 25 Lakhs
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input id="p2" type="checkbox" value=""> 25.1 - 35 Lakhs
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input id="p3" type="checkbox" value=""> Above 35 Lakhs
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4" style="float: left; padding-left: 100px; padding-top: 40px;">
+                    <h4>Property Type:</h4>
+                    <form>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input id="t1" type="checkbox" value=""> HOUSE
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input id="t2" type="checkbox" value=""> APARTMENT
+                            </div>
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="col-md-4" style="float: left; padding-top: 40px;">
+                    <h4>Appartment Size:</h4>
+                    <form>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input id="b1" type="checkbox" value=""> 2BKH
+                            </div>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-12">
+                <h1>Choose Your Property!</h1>
+            </div>
+        </div>
+        <div class="space"></div>
+        <hr>
+        <div class="space"></div>
+        <div class="card">
+            <h5 class="card-header">Property Listings | Renting</h5>
+            <div class="card-body" id="list">
+            </div>
+        </div>
+        <div class="space"></div>
+        <hr>
+        <div class="space"></div>
+    </div>
+    <br>
+    <!--main div for container -->
+    <div class="container">
+        <div class="pull-right">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" id="prev">Previous</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#" id="next">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+     <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+   
+ <script>
+        $(document).ready(function () {
+            window.sr = ScrollReveal();
+       
+        sr.reveal('#heading', {
+          duration: 2000,
+          origin:'buttom',
+          
+        });
+         sr.reveal('.showcase-left', {
+          duration: 2000,
+          origin:'top',
+          distance:'100px'
+        });
+        sr.reveal('.showcase-right', {
+          duration: 2000,
+          origin:'right',
+          distance:'100px'
+        });
+        sr.reveal('#click-here', {
+          duration: 2000,
+          delay: 1000,
+          origin:'bottom'
+        });
+    });
+</script>
+</body>
+<div class="space"></div>
+<div class="space"></div>
+<!---footer starts-->
+<footer>
+    <div style="text-align: center; padding: 20px; font-size: 20px;">
+        <ul>
+            <li class="list-inline-item txt"><a href="about_us.html">About us</a></li>
+            <li class="list-inline-item txt"><a href="contact_us.html">Customer Care</a></li>
+            <li class="list-inline-item txt"><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+            <li class="list-inline-item txt"><a href="privacy_policy.html">Privacy Policy</a></li>
+        </ul>
+        <hr color="#989eb4" width="70%">
+        <br>
+        <div>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#"><img src="assets/images/tw.png" class="zoom center"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><img src="assets/images/fb.png" class="zoom center"></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#"><img src="assets/images/linkedin.png" class="zoom center"></a>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <p class="center" style="color: #fff; font-size: 16px;"><i><b>PROPERties </b> :Copyrights Reserved</i></p>
+    </div>
+</footer>
+<!--footer ends-->
+</html>

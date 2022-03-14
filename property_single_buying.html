@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>PROPERties | Property Page</title>
+      <link rel="stylesheet" href="assets/css/chstyle.css" />
+      <!--For header and footer that is common to all pages-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+
+       <link rel="stylesheet" href="modules/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="assets/css/chstyle.css">
+      <script type="modules/js/bootstrap.js"></script>
+      <script type="modules/js/bootstrap.min.js"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      
+      <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <script>
+         /* When the user clicks on the button, 
+                          toggle between hiding and showing the dropdown content */
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         function myFunct() {
+             document.getElementById("myDropdown2").classList.toggle("show");
+         }
+         // Close the dropdown if the user clicks outside of it
+         window.onclick = function (event) {
+             if (!event.target.matches('.dropbtn')) {
+                 var dropdowns = document.getElementsByClassName("dropdown-content");
+                 var i;
+                 for (i = 0; i < dropdowns.length; i++) {
+                     var openDropdown = dropdowns[i];
+                     if (openDropdown.classList.contains('show')) {
+                         openDropdown.classList.remove('show');
+                     }
+                 }
+             }
+         }
+      </script>
+      <style>
+         .nb {
+         /*Buy, Rent and Search buttons*/
+         background-color: transparent;
+         border: 2px solid #fff;
+         color: #fff;
+         margin-right: 10px;}
+         footer {
+         background-image: url("assets/images/footerbk.png");
+         opacity: 0.95;
+         background-size: 100vh;
+         background-color: #181a21;
+         padding: 1rem;
+         text-align: center;
+         }
+         footer li a {
+         color: rgba(255, 255, 255, 1);
+         margin: auto 2rem;
+         }
+         footer .icon {
+         margin-right: 25px;
+         height: 20px;
+         float: left;
+         }
+         footer a:hover {
+         color: rgba(255, 255, 255, 1);
+         text-decoration: underline;
+         text-decoration-color: rgba(255, 255, 255, 1);
+         }
+      </style>
+   </head>
+   <body>
+      <script>
+         $(document).ready(function () {
+             var page;
+             var id;
+         
+             if (localStorage.getItem("property_object")) {
+                 var ob = JSON.parse(localStorage.getItem("property_object"));
+                 localStorage.removeItem("property_object");
+                 id = ob["prop_id"];
+                 page = ob["page"];
+             }
+         
+            /*$(window).bind('beforeunload', function () {
+                 var ob = {
+                     "prop_id": id,
+                     "page": page
+                 };
+                 localStorage.setItem("property_object", JSON.stringify(ob));
+             });*/
+         
+             $.ajax({
+                 dataType: 'json',
+                 url: "assets/prop2.json",
+                 method: "GET"
+             }).done(function (data) {
+                 /*var str = '<div class="item" data-prop-id="' + data.properties[0].listBuy[id].id + '">' +
+                   '<img src="' + data.properties[0].listBuy[id].property_image + '" class="img-rounded" alt="Property Image">' + '</img>' +
+                   'Property Name: ' + data.properties[0].listBuy[id].property_name + '<br />' +
+                   'Property Type: ' + data.properties[0].listBuy[id].property_type + '<br />' +
+                   'Property Address: ' + data.properties[0].listBuy[id].property_address + '<br />' +
+                   'Property Description: ' + data.properties[0].listBuy[id].property_description + '<br />' +
+                   'Available From: ' + data.properties[0].listBuy[id].property_available_from + '<br />' +
+                   'Created on: ' + data.properties[0].listBuy[id].created_on + '<br />' +
+                   'Bedrooms: ' + data.properties[0].listBuy[id].number_of_bedrooms + '<br />' +
+                   'Washrooms: ' + data.properties[0].listBuy[id].number_of_washrooms + '<br />' +
+                   'Garages: ' + data.properties[0].listBuy[id].number_of_garage + '<br />' +
+                   'Built-up Area: ' + data.properties[0].listBuy[id].built_up + '<br />' +
+                   'Agent name: ' + data.properties[0].listBuy[id].agent.agent_name + '<br />' +
+                   'Rent per month: ' + data.properties[0].listBuy[id].rent_at + '<br />' +
+                   '</div>';*/
+                   function yesno(a) {
+                     if (a==1) {
+                       return "Yes";
+                     }
+                     else {
+                       return "No";
+                     }
+                   };
+         
+                   $('#name').append(data.properties[0].listBuy[id].property_name);
+                   $('#desc').append(data.properties[0].listBuy[id].property_description);
+         
+                   var str = '<dt class="col-sm-4">Property Type</dt><dd class="col-sm-8"><p>' + data.properties[0].listBuy[id].property_type +'</p></dd><br>' +
+                             '<dt class="col-sm-4">Property Address</dt><dd class="col-sm-8"><p>' + data.properties[0].listBuy[id].property_address +'</p></dd><br>' +
+                             '<dt class="col-sm-4">Property Available From</dt><dd class="col-sm-8"><p>' + data.properties[0].listBuy[id].property_available_from +'</p></dd><br>' +
+                             '<dt class="col-sm-4">Property Created on</dt><dd class="col-sm-8"><p>' + data.properties[0].listBuy[id].created_on +'</p></dd><br>' +
+                             '<dt class="col-sm-4">Built-up Area</dt><dd class="col-sm-8"><p>' + data.properties[0].listBuy[id].built_up +'</p></dd><br>' +
+                             '<dt class="col-sm-4">Amenities</dt><dd class="col-sm-8"><ul>' + 
+                             '<li>Parking: ' + yesno(data.properties[0].listBuy[id].amenities.parking) + '</li>' +
+                             '<li>Wifi: ' + yesno(data.properties[0].listBuy[id].amenities.wifi) + '</li>' +
+                             '<li>Community Hall: ' + yesno(data.properties[0].listBuy[id].amenities.community_hall) + '</li>' +
+                             '<li>Elevator: ' + yesno(data.properties[0].listBuy[id].amenities.elevator) + '</li>' +
+                             '<li>Gym: ' + yesno(data.properties[0].listBuy[id].amenities.gym) + '</li>' +
+                             '</ul></dd><br>';
+                   $('#info').append(str);
+         
+                   $('#prop_img').attr('src', data.properties[0].listBuy[id].property_image);
+         
+                 var map = '<div style="text-decoration:none; overflow:hidden;max-width:100%;width:1300px;height:500px;"><div id="gmapdisplay" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=' + data.properties[0].listBuy[id].map_location.lat + ',+' + data.properties[0].listBuy[id].map_location.lat + '&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="codefor-google-map" href="https://www.embed-map.com" id="authorizemaps-data">https://www.embed-map.com</a><style>#gmapdisplay .text-marker{}.map-generator{max-width: 100%; max-height: 100%; background: none;</style></div>';
+                 $("#map").append(map);
+         
+                 $('#aname').append(data.properties[0].listBuy[id].agent.agent_name);
+                 $('#bio').append(data.properties[0].listBuy[id].agent.agent_bio);
+                 $('#aimage').attr('src', data.properties[0].listBuy[id].agent.agent_image);
+             })
+         });
+      </script>
+      <!--script ends-->
+      <!--header starts-->
+      <header>
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <!--Fixed navigation bar-->
+            <a class="navbar-brand" href="#">PROPERties.com</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="form-inline mt-1">
+               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+               <ul class="navbar-nav">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="index.html">Home
+                     <span class="sr-only">(current)</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="login.html">Login | Register</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact_us.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <!--Dropdowm list for currency and languages-->
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">&#8377;</a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item active" href="#">&#8377;</a>
+                        <a class="dropdown-item" href="#">&#36;</a>
+                        <a class="dropdown-item" href="#">&#8364;</a>
+                        <a class="dropdown-item" href="#">&#163;</a>
+                        <a class="dropdown-item" href="#">&#165;</a>
+                     </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">English</a>
+                     <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item active" href="#">English</a>
+                        <a class="dropdown-item" href="#">हिंदी</a>
+                        <a class="dropdown-item" href="#">German</a>
+                        <a class="dropdown-item" href="#">Français</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <!--header ends-->
+      <!--1 pannel -->
+      <div class="space"></div>
+      <div class="space"></div>
+      <div class="container-fluid">
+         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img class="d-block w-100" src="assets/images/im1.jpg" alt="First slide">
+                  <div class="carousel-caption">
+                     <h3>Make youre move</h3>
+                     <p>We had such a great time in LA!</p>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/images/im2.jpg" alt="Second slide">
+               </div>
+               <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/images/im2.jpg" alt="Third slide">
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+         </div>
+         <div class="jumbotron jumbotron-fluid bg-white">
+            <div class="container">
+               <h1 class="display-4" style="text-align: center;" id="name"></h1>
+               <hr>
+               <div class="container">
+                  <div class="row">
+                     <div class="col">
+                        <p class="lead" id="desc"></p>
+                        <br>
+                     </div>
+                     <div class="col">
+                        <h3>Property Details</h3>
+                        <span class="badge badge-pill badge-success">Verified Lisiting</span></cite>
+                        <dl class="row" id="info"></dl>
+                     </div>
+                  </div>
+               </div>
+               <img id="prop_img" src="" style="width: 100%; height: 400px;">
+               <br>
+               <div style="width:100%;" id="map"></div>
+            </div>
+         </div>
+         <div class="shadow-lg p-3 mb-5 bg-dark rounded" style="text-align: center; color: white;">
+            <h2>PROPERties.com</h2>
+            <p class="lead">Want to Buy a Property ?</p>
+            <i>
+               <p class="lead">Buy Your property Now</p>
+            </i>
+            <a class="btn btn-primary" href="contact_us.html" role="button">Contact Us</a>
+         </div>
+         <br>
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <img id="aimage" src="" class="img-thumbnail rounded-circle" style="width: 350px; height: 300px;">
+               </div>
+               <div class="col">
+                  <blockquote class="blockquote text-left">
+                     <h2 id="aname"></h2>
+                     <p id="bio"></p>
+                     <span class="badge badge-pill badge-success">Verified Agent</span>
+                  </blockquote>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+
+      <div class="space"></div>
+      <hr>
+      <div class="space"></div>
+   </body>
+   <div class="space"></div>
+   <div class="space"></div>
+   <!--footer starts-->
+   <footer>
+      <div style="text-align: center; padding: 20px; font-size: 20px;">
+         <ul>
+            <li class="list-inline-item txt"><a href="about_us.html">About us</a></li>
+            <li class="list-inline-item txt"><a href="contact_us.html">Customer Care</a></li>
+            <li class="list-inline-item txt"><a href="terms_and_conditions.html">Terms and Conditions</a></li>
+            <li class="list-inline-item txt"><a href="privacy_policy.html">Privacy Policy</a></li>
+         </ul>
+         <hr color="#989eb4" width="70%">
+         <br>
+         <div>
+            <ul class="list-inline">
+               <li class="list-inline-item"><a href="#"><img src="assets/images/tw.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/fb.png" class="zoom center"></a></li>
+               <li class="list-inline-item"><a href="#"><img src="assets/images/linkedin.png" class="zoom center"></a></li>
+            </ul>
+         </div>
+         <br>
+         <p class="center" style="color: #fff; font-size: 16px;"><i><b>PROPERties </b> :Copyrights Reserved</i></p>
+      </div>
+   </footer>
+   <!---footer ends-->
+</html>
